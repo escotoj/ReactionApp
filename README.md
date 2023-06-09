@@ -30,8 +30,12 @@ GitHub: [escotoj](https://github.com/escotoj)
 TODO 
 ADD (Thought and User Controllers code)
 
+API and CONTROLLERS work together and routes seem to be made as functions in the controller files and later imported to the api and individual routes and then called. 
+
 FIX Reactions.js and merge it to Thought.js
 (This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.)
+
+CHECK - timestamps in the models, and update route in the controller. 
 
 DONE
 ADD full REAME
