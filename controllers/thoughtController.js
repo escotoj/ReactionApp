@@ -45,7 +45,7 @@ async deleteThought(req, res) {
         }
         res.json({ message: 'Thought has been deleted!' });
     } catch (err) {
-        console.log('delete err', err)
+        console.log('THOUGHT delete err', err)
         res.status(500).json(err);
     }
 },
@@ -66,9 +66,49 @@ async updateThought(req, res) {
     } catch (err) {
         console.log('UPDATE err', err)
         res.status(500).json(err);    }
+},
+// REACTIONS NEEDS A POST AND DELETE BELOW
+// REACTION /POST
+async postReaction(req, res){
+    try{
+        const thought = await Thought.findByIdAndUpdate(
+            {_id: req.params.thoughtId},
+            // {{reactions: req.body}},
+            {runValidators: true,
+            new: true}
+        );
+        if(!thought){
+            return res.status(404).json({ message: 'Thought not found' });
+        }
+        res.json(thought);
+    }
+    catch(err){
+        console.log('REACTION/POST ERR', err)
+        res.status(500).json(err);
+    }
+},
+
+// DELETE - reaction/DELETE 
+async deleteReaction(req, res) {
+    try{
+        const thought = await Thought.findByIdAndUpdate(
+            {_id: req.params.thoughId},
+            // {{reactions: {reactionId: req.params.reactionId}}},
+            {runValidators: true,
+            new: true} 
+        );
+
+        if(!thought){
+            return res.status(404).json({ message: 'No Thought found :(' });
+        }
+        res.json(thought);
+    }
+    catch(err){
+        console.log('REACTION/DELETE ERR', err)
+        res.status(500).json(err);
+    }
 }
 };
 // }
 
 
-// REACTIONS NEEDS A POST AND DELETE BELOW
