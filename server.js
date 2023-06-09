@@ -1,13 +1,12 @@
-require('dotenv').config()
-const db = require('./config/connections')
+// require('dotenv').config()
+const connectDB = require('./config/connections')
 const routes = require('./routes')
-
-
 const express = require('express');
 
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -18,7 +17,23 @@ app.use((req, res, next) => {
     next()
 })
 
+// works
+// app.listen(PORT, () => {
+//     console.log('listeing.... on http://localhost:3001/')
+// });
 
-app.listen(PORT, () => {
-    console.log('listeing.... on http://localhost:3001/')
-});
+
+connectDB().then(() => {
+    app.listen(PORT, () => {
+      console.log('Listening on http://localhost:3001/');
+    });
+  });
+  
+
+
+// crashes
+// connectDB.once('open', () => {
+//     app.listen(PORT, () => {
+//     console.log('listeing.... on http://localhost:3001/')
+// });
+// });
