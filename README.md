@@ -27,21 +27,25 @@ Email: j.escoto@gmail.com
 GitHub: [escotoj](https://github.com/escotoj)
 
 
-TODO 
-ADD (Thought and User Controllers code)
+## TODO 
+API routes for user and thought 
+CHECK - timestamps in the models, and update route in the controller. Reactiongid. 
+CHECK routes.
+USER AND THOUGHT PUT ROUTES NEED WORK
+REACTION NEEDS WORK
+FRIENDS NEEDS WORK
 
-API and CONTROLLERS work together and routes seem to be made as functions in the controller files and later imported to the api and individual routes and then called. 
+### DONE
 
-FIX Reactions.js and merge it to Thought.js
+- ADDED (User Controllers code)
+- Completed the Thought controller
+- FIXed Reactions.js and merge it to Thought.js
 (This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.)
+- ADD full REAME
+- get mongoDB connected `+`
 
-CHECK - timestamps in the models, and update route in the controller. 
+## CODE NEEDED FOR SERVER 
 
-DONE
-ADD full REAME
-get mongoDB connected `+`
-
-CODE NEEDED FOR SERVER 
 brew services restart mongodb-community 
 brew services stop mongodb-community@6.0
 

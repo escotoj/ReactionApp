@@ -55,7 +55,7 @@ async updateThought(req, res) {
     try {
         const thought = await Thought.findOneAndUpdate(
             {_id: req.params.thoughtId},
-            // NEEDS WORK
+            // *****************************NEEDS WORK *******************
             {text: req.body},
             { runValidators: true, new: true }
         );
@@ -67,7 +67,7 @@ async updateThought(req, res) {
         console.log('UPDATE err', err)
         res.status(500).json(err);    }
 },
-// REACTIONS NEEDS A POST AND DELETE BELOW
+// ******************** REACTIONS NEEDS A POST AND DELETE BELOW **********
 // REACTION /POST
 async postReaction(req, res){
     try{
