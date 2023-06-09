@@ -2,7 +2,7 @@ const { User, Thought } = require('../models')
 
 module.exports = {
     // GET ALL USERS - /GET
-    async getUser(req, res) {
+    async getUsers(req, res) {
       try {
         const users = await User.find();
         res.json(users);
@@ -11,7 +11,7 @@ module.exports = {
       }
     },
   
-    //   GET ONE SINGLEUSER - /GET/:id
+    //   GET ONE SINGLEUSER - /GET/:UserId
     async getSingleUser(req, res) {
       try {
         const user = await User.findOne({ _id: req.params.userId });

@@ -27,13 +27,14 @@ Email: j.escoto@gmail.com
 GitHub: [escotoj](https://github.com/escotoj)
 
 
-## TODO 
-API routes for user and thought 
-CHECK - timestamps in the models, and update route in the controller. Reactiongid. 
-CHECK routes.
-USER AND THOUGHT PUT ROUTES NEED WORK
-REACTION NEEDS WORK
-FRIENDS NEEDS WORK
+### TODO 
+
+- FINISH ADDING ALL ROUTES
+- CHECK - timestamps in the models, and update route in the controller Reactiongid. 
+- TEST ROUTES
+- USER AND THOUGHT PUT ROUTES NEED WORK
+- REACTION NEEDS WORK
+- FRIENDS NEEDS WORK
 
 ### DONE
 
@@ -43,11 +44,12 @@ FRIENDS NEEDS WORK
 (This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.)
 - ADD full REAME
 - get mongoDB connected `+`
+- API routes for user and thought 
 
 ## CODE NEEDED FOR SERVER 
 
-brew services restart mongodb-community 
-brew services stop mongodb-community@6.0
+- brew services restart mongodb-community 
+- brew services stop mongodb-community@6.0
 
 brew services start mongodb-community@6.0 (gives error regarding bootstrap)
 

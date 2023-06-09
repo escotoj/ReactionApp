@@ -11,7 +11,7 @@ module.exports = {
     }
   },
 
-  //   GET ONE SINGLETHOUGHT - /GET/:id
+  //   GET ONE SINGLETHOUGHT - /GET/:ThoughtId
   async getSingleThought(req, res) {
     try {
       const thought = await Thought.findOne({ _id: req.params.thoughtId });
