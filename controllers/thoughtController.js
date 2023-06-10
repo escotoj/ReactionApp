@@ -4,6 +4,7 @@ module.exports = {
   // GET ALL THOUGHTS - /GET - GOOD
   async getThoughts(req, res) {
     try {
+      console.log('GET ALL THOUGHTS')
       const thoughts = await Thought.find();
       res.json(thoughts);
     } catch (err) {
@@ -14,7 +15,7 @@ module.exports = {
   //   GET ONE SINGLETHOUGHT - /GET/:ThoughtId - BAD ***** GETS ALL
   async getSingleThought(req, res) {
     try {
-      const thought = await Thought.findOne({ _id: req.params.thoughtId })
+      const thought = await Thought.findOne(req.params.thoughtId)
       // .select('-__v'); 
       // IN MINIPROJECT EXAMPLE BUT IDK WHAT IT IS
       if (!thought) {
@@ -44,6 +45,7 @@ async deleteThought(req, res) {
         if (!thought) {
             return res.status(404).json({message: 'No Thought Found :('})
         }
+        console.log('DELETED THOUGHT')
         res.json({ message: 'Thought has been deleted!' });
     } catch (err) {
         console.log('THOUGHT delete err', err)
