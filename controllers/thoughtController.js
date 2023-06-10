@@ -53,13 +53,12 @@ async deleteThought(req, res) {
     }
 },
 
-// UPDATE - /PUT 
+// UPDATE - /PUT - NEEDS testing - updated the findbyone to find by id
 async updateThought(req, res) {
     try {
-        const thought = await Thought.findOneAndUpdate(
-            {_id: req.params.thoughtId},
-            // *****************************NEEDS WORK *******************
-            {text: req.body},
+        const thought = await Thought.findByIdAndUpdate(
+            req.params.thoughtId,
+            req.body,
             { runValidators: true, new: true }
         );
         if (!thought) {
@@ -75,8 +74,8 @@ async updateThought(req, res) {
 async postReaction(req, res){
     try{
         const thought = await Thought.findByIdAndUpdate(
-            {_id: req.params.thoughtId},
-            // {{reactions: req.body}},
+            req.params.thoughtId,
+            { $push: {reactions: req.body} },
             {runValidators: true,
             new: true}
         );
@@ -95,10 +94,10 @@ async postReaction(req, res){
 async deleteReaction(req, res) {
     try{
         const thought = await Thought.findByIdAndUpdate(
-            {_id: req.params.thoughId},
-            // {{reactions: {reactionId: req.params.reactionId}}},
-            {runValidators: true,
-            new: true} 
+          req.params.thoughtId,
+          { $pull: {reactions: { reactionId: req.params.reactionId } } },
+          {runValidators: true,
+          new: true}
         );
 
         if(!thought){

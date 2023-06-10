@@ -1,7 +1,5 @@
 const { User, Thought } = require('../models') 
 
-const { v4: uuidv4 } = require('uuid')
-
 module.exports = {
     // GET ALL USERS - /GET - GOOD
     async getUsers(req, res) {
@@ -29,19 +27,6 @@ module.exports = {
         res.status(500).json(err);
       }
     },
-  
-    //   CREATE NEW USER - /POST - BAD ONLY WORK FOR ONE USER 
-    // UUID --- NEEDS TESTIng ------------------------------
-    // async createUser(req, res) {
-    //   try {
-    //     const user = await User.create({ ...req.body, id: uuidv4() });
-    //     res.json(user);
-    //     console.log('USERCREATED')
-    //   } catch (err) {
-    //     console.log(err);
-    //     return res.status(500).json(err);
-    //   }
-    // },
 
     // ORIGINAL 
     async createUser(req, res) {
@@ -56,11 +41,10 @@ module.exports = {
     },
     // ------------------------------------------------
   
-  //   DELETE A USER - /DELETE - BAD *******
+  //   DELETE A USER - /DELETE - GOOD
   async deleteUser(req, res) {
       try {
           const user = User.findByIdAndDelete({ _id: req.params.userId });
-          // const user = User.findByIdAndDelete(req.params.userId); -- TRYTHIS _____
           if (!user) {
               return res.status(404).json({message: 'No User Found :('})
           }
@@ -72,14 +56,22 @@ module.exports = {
       }
   },
   
-  // UPDATE - /POST 
+  // UPDATE - /POST - NEEDS TESTING
   async updateUser(req, res) {
       try {
-          const user = await User.findOneAndUpdate(
-              {_id: req.params.userId},
-              // NEEDS WORK ****
-              {text: req.body},
-              { runValidators: true, new: true }
+          // const user = await User.findOneAndUpdate(
+          //     {_id: req.params.userId},
+          //     // NEEDS WORK ****
+          //     {text: req.body},
+          //     { runValidators: true, new: true }
+          // );
+          const user = await User.findByIdAndUpdate(
+            req.params.userId,
+            req.body,
+            {
+              runValidators: true,
+              new: true
+            }
           );
           if (!user) {
               return res.status(404).json({ message: 'No user found :(!' });

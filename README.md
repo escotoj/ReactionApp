@@ -27,7 +27,6 @@ GitHub: [escotoj](https://github.com/escotoj)
 
 ### TODO
 
-- CHECK - timestamps in the models, and update route in the controller Reactiongid.
 - TEST ROUTES - `ONLY ROUTES THAT WORK - GET AND POST FOR BOTH USER AND THOUGHTS, post only works once every other route does not work yet)`
 - USER AND THOUGHT PUT ROUTES NEED WORK
   [
@@ -36,7 +35,7 @@ GitHub: [escotoj](https://github.com/escotoj)
 - getSingleUser `Good`
 - createUser `Good`
 - deleteUser `GOOD`
-- updateUser `untested`
+- updateUser `unteste but worked on`
 - addFriend `untested`
 - removeFriend `untested`
 
@@ -45,17 +44,18 @@ THOUGHT ROUTES
 - getSingleThought `Good`
 - createThought `Good`
 - deleteThought `** HITS BUT DOES NOT UPDATE DATEBASE **`
-- updateThought `untested`
-- postReaction `untested`
-- deleteReaction `untested`
+- updateThought `untested but worked on`
+- postReaction `untested but worked on`
+- deleteReaction `untested but worked on`
 ]
 
-- REACTION NEEDS WORK
+- REACTION NEEDS WORK - did work on them 
 - FRIENDS NEEDS WORK
 - userroutes.js friend route
 
 ### DONE
 
+- CHECK - timestamps in the models, and update route in the controller Reactiongid.
 - FINISH ADDING ALL ROUTES
 - ADDED (User Controllers code)
 - Completed the Thought controller

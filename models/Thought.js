@@ -20,8 +20,7 @@ const reactionSchema = new Schema(
       },
       createdAt: {
         type: Date,
-        // timestamp: true, NEEDS TIMESTAMP
-        // getter 
+        default: Date.now,
       }
     },
     {
@@ -41,15 +40,16 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
-      // timestamp: true, NEEDS TIMESTAMP
       default: Date.now,
     },
     // array of nested documents
     reactions: [reactionSchema],
   },
   {
+    timestamps: true, // timestamps added 
     toJSON: {
       getters: true,
+      virtuals: true,
     },
   }
 );
