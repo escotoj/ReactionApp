@@ -28,16 +28,17 @@ GitHub: [escotoj](https://github.com/escotoj)
 
 
 ### TODO 
-
-- FINISH ADDING ALL ROUTES
 - CHECK - timestamps in the models, and update route in the controller Reactiongid. 
 - TEST ROUTES
 - USER AND THOUGHT PUT ROUTES NEED WORK
+
 - REACTION NEEDS WORK
 - FRIENDS NEEDS WORK
+- userroutes.js friend route
+
 
 ### DONE
-
+- FINISH ADDING ALL ROUTES
 - ADDED (User Controllers code)
 - Completed the Thought controller
 - FIXed Reactions.js and merge it to Thought.js
