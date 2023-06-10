@@ -1,7 +1,7 @@
 const { User, Thought } = require("../models");
 
 module.exports = {
-  // GET ALL THOUGHTS - /GET
+  // GET ALL THOUGHTS - /GET - GOOD
   async getThoughts(req, res) {
     try {
       const thoughts = await Thought.find();
@@ -11,11 +11,12 @@ module.exports = {
     }
   },
 
-  //   GET ONE SINGLETHOUGHT - /GET/:ThoughtId
+  //   GET ONE SINGLETHOUGHT - /GET/:ThoughtId - BAD ***** GETS ALL
   async getSingleThought(req, res) {
     try {
-      const thought = await Thought.findOne({ _id: req.params.thoughtId });
-      // .select('-__v'); IN MINIPROJECT EXAMPLE BUT IDK WHAT IT IS
+      const thought = await Thought.findOne({ _id: req.params.thoughtId })
+      // .select('-__v'); 
+      // IN MINIPROJECT EXAMPLE BUT IDK WHAT IT IS
       if (!thought) {
         return res.status(404).json({ message: "No Thought Found :(" });
       }
@@ -25,7 +26,7 @@ module.exports = {
     }
   },
 
-  //   CREATE NEW THOUGHT - /POST
+  //   CREATE NEW THOUGHT - /POST - GOOD
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
@@ -36,7 +37,7 @@ module.exports = {
     }
   },
 
-//   DELETE A THOUGHT - /DELETE
+//   DELETE A THOUGHT - /DELETE - BAD *****
 async deleteThought(req, res) {
     try {
         const thought = Thought.findByIdAndDelete({_id: req.params.thoughtId});

@@ -1,7 +1,7 @@
 const { User, Thought } = require('../models') 
 
 module.exports = {
-    // GET ALL USERS - /GET
+    // GET ALL USERS - /GET - GOOD
     async getUsers(req, res) {
       try {
         const users = await User.find();
@@ -25,7 +25,7 @@ module.exports = {
       }
     },
   
-    //   CREATE NEW USER - /POST
+    //   CREATE NEW USER - /POST - BAD ONLY WORK FOR ONE USER 
     async createUser(req, res) {
       try {
         const user = await User.create(req.body);
@@ -36,7 +36,7 @@ module.exports = {
       }
     },
   
-  //   DELETE A USER - /DELETE
+  //   DELETE A USER - /DELETE - BAD *******
   async deleteUser(req, res) {
       try {
           const user = User.findByIdAndDelete({_id: req.params.userId});

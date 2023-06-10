@@ -29,7 +29,7 @@ GitHub: [escotoj](https://github.com/escotoj)
 
 ### TODO 
 - CHECK - timestamps in the models, and update route in the controller Reactiongid. 
-- TEST ROUTES
+- TEST ROUTES - `ONLY ROUTES THAT WORK - GET AND POST FOR BOTH USER AND THOUGHTS, post only works once every other route does not work yet)`
 - USER AND THOUGHT PUT ROUTES NEED WORK
 
 - REACTION NEEDS WORK
