@@ -1,4 +1,4 @@
-# ReactionApp (MongoDb - Express - )
+# ReactionApp NoSQL (MongoDb - Express)
 
 ## Description
 
@@ -25,9 +25,11 @@ For more questions please contact below:
 Email: j.escoto@gmail.com
 GitHub: [escotoj](https://github.com/escotoj)
 
-### TODO
+## TODO
 
-# NEED WORK
+timestamp for thoughts 
+
+### NEED WORK
 
 THOUGHT ROUTES
 - deleteThought `** HITS BUT DOES NOT UPDATE DATEBASE **`
@@ -35,14 +37,14 @@ THOUGHT ROUTES
 - postReaction `untested but worked on`
 - deleteReaction `untested but worked on`
 
-USER ROUTES
+### USER ROUTES
 - updateUser `bad`
 - addFriend `untested but worked on`
 - removeFriend `untested but worked on`
 
 ## DONE
 
-# TEST ROUTES 
+### TEST ROUTES 
 - getUsers `Good`
 - getSingleUser `Good`
 - createUser `Good`

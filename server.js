@@ -19,6 +19,7 @@ app.use(express.json());
 app.use('/users', userRoutes);
 app.use('/thoughts', thoughtRoutes);
 
+// console logs location of and request 
 app.use((req, res, next) => {
     console.log(req.path, req.method);
     next()
