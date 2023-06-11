@@ -56,10 +56,14 @@ async deleteThought(req, res) {
 // UPDATE - /PUT - NEEDS testing - updated the findbyone to find by id
 async updateThought(req, res) {
     try {
+      const { thoughtText } = req.body;
+      const { ThoughtId } = req.params;
         const thought = await Thought.findByIdAndUpdate(
-            req.params.thoughtId,
-            req.body,
-            { runValidators: true, new: true }
+          console.log(ThoughtId),
+            {_id: ThoughtId},
+            { thoughtText },
+            { runValidators: true, new: true },
+            console.log('req.body', thoughtText),
         );
         if (!thought) {
             return res.status(404).json({ message: 'No THOUGHT found :(!' });

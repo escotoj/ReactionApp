@@ -1,4 +1,4 @@
-// require('dotenv').config()
+require('dotenv').config()
 const connectDB = require('./config/connections')
 const routes = require('./routes')
 const thoughtRoutes = require('./routes/api/thoughtRoutes');
@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 
 
 connectDB().then(() => {
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT, () => {
       console.log('Listening on http://localhost:3001/');
     });
   });
