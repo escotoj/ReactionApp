@@ -1,6 +1,5 @@
 const router = require('express').Router();
 
-// fill in with data
 // IMPORTING THOUGHT FUNCTIONS
 const {
     getThoughts,

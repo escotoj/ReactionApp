@@ -24,23 +24,9 @@ app.use((req, res, next) => {
     next()
 })
 
-// works
-// app.listen(PORT, () => {
-//     console.log('listeing.... on http://localhost:3001/')
-// });
-
-
 connectDB().then(() => {
     app.listen(process.env.PORT, () => {
       console.log('Listening on http://localhost:3001/');
     });
   });
   
-
-
-// crashes
-// connectDB.once('open', () => {
-//     app.listen(PORT, () => {
-//     console.log('listeing.... on http://localhost:3001/')
-// });
-// });

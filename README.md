@@ -1,4 +1,4 @@
-# ReactionApp (MongoDb - Express)
+# ReactionApp (MongoDb - Express - )
 
 ## Description
 
@@ -27,33 +27,29 @@ GitHub: [escotoj](https://github.com/escotoj)
 
 ### TODO
 
-- TEST ROUTES - `ONLY ROUTES THAT WORK - GET AND POST FOR BOTH USER AND THOUGHTS, post only works once every other route does not work yet)`
-- USER AND THOUGHT PUT ROUTES NEED WORK
-  [
-  USER ROUTES
+# NEED WORK
+
+THOUGHT ROUTES
+- deleteThought `** HITS BUT DOES NOT UPDATE DATEBASE **`
+- updateThought `bad`
+- postReaction `untested but worked on`
+- deleteReaction `untested but worked on`
+
+USER ROUTES
+- updateUser `bad`
+- addFriend `untested but worked on`
+- removeFriend `untested but worked on`
+
+## DONE
+
+# TEST ROUTES 
 - getUsers `Good`
 - getSingleUser `Good`
 - createUser `Good`
 - deleteUser `GOOD`
-- updateUser `unteste but worked on`
-- addFriend `untested`
-- removeFriend `untested`
-
-THOUGHT ROUTES
 - getThoughts`Good`
 - getSingleThought `Good`
 - createThought `Good`
-- deleteThought `** HITS BUT DOES NOT UPDATE DATEBASE **`
-- updateThought `untested but worked on`
-- postReaction `untested but worked on`
-- deleteReaction `untested but worked on`
-]
-
-- REACTION NEEDS WORK - did work on them 
-- FRIENDS NEEDS WORK
-- userroutes.js friend route
-
-### DONE
 
 - CHECK - timestamps in the models, and update route in the controller Reactiongid.
 - FINISH ADDING ALL ROUTES
@@ -64,6 +60,9 @@ THOUGHT ROUTES
 - ADD full REAME
 - get mongoDB connected `+`
 - API routes for user and thought
+- REACTION NEEDS WORK - did work on them 
+- FRIENDS NEEDS WORK
+- userroutes.js friend route
 
 ## CODE NEEDED FOR SERVER
 
