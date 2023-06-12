@@ -43,7 +43,8 @@ async deleteThought(req, res) {
   console.log('req.params', req.params.thoughtId)
 
     try {
-        const thought = Thought.findByIdAndDelete({_id: req.params.thoughtId});
+        // const thought = Thought.deleteOne({_id: req.params.thoughtId});
+        const thought = await Thought.findByIdAndDelete(req.params.thoughtId);
         if (!thought) {
             return res.status(404).json({message: 'No Thought Found :('})
         }

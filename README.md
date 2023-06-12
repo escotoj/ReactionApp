@@ -32,10 +32,10 @@ timestamp for thoughts
 ### NEED WORK
 
 THOUGHT ROUTES
-- deleteThought `** HITS BUT DOES NOT UPDATE DATEBASE **`
-- updateThought `bad`
-- postReaction `untested but worked on`
-- deleteReaction `untested but worked on`
+- deleteThought `** was missing await **`
+- updateThought `bad - set up right testing was wrong`
+- postReaction `set up well but need to test`
+- deleteReaction `set up well but need to test`
 
 ### USER ROUTES
 - updateUser `bad`
@@ -74,3 +74,7 @@ THOUGHT ROUTES
 brew services start mongodb-community@6.0 (gives error regarding bootstrap)
 
 sudo brew services start mongodb-community@6.0 - server running with no auth
+
+lower case routes for user 
+added a new route for reactiong for realete 
+
