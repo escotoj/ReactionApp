@@ -14,7 +14,7 @@ const {
   
   // INDIVIDUAL THOUGHT ROUTES /api/Thoughts/:ThoughtId
   router
-    .route('/:ThoughtId')
+    .route('/:thoughtId')
     .get(getSingleThought)
     .put(updateThought)
     .delete(deleteThought);

@@ -40,6 +40,8 @@ module.exports = {
 
 //   DELETE A THOUGHT - /DELETE - BAD *****
 async deleteThought(req, res) {
+  console.log('req.params', req.params.thoughtId)
+
     try {
         const thought = Thought.findByIdAndDelete({_id: req.params.thoughtId});
         if (!thought) {
