@@ -32,19 +32,21 @@ timestamp for thoughts
 ### NEED WORK
 
 THOUGHT ROUTES
-- deleteThought `** was missing await **`
-- updateThought `bad - set up right testing was wrong`
+
 - postReaction `set up well but need to test`
 - deleteReaction `set up well but need to test`
 
 ### USER ROUTES
-- updateUser `bad`
+
 - addFriend `untested but worked on`
 - removeFriend `untested but worked on`
 
 ## DONE
 
 ### TEST ROUTES 
+- updateUser `good`
+- deleteThought `good`
+- updateThought `good`
 - getUsers `Good`
 - getSingleUser `Good`
 - createUser `Good`
