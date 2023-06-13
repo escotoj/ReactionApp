@@ -4,6 +4,12 @@
 
 Using MongoDB to build a social network web application. Using Express.js for routing, MongoDB database, and the Mongoose ODM.
 
+## Video Walkthrough
+
+Walkthrough videos of Application showing functionality: 
+[![Part 1 showing all routes function](https://i.imgur.com/vKb2F1B.png)](https://drive.google.com/file/d/1Hj49s6_5Kiw8lEpBYLBB52-XA7BseQm4/view ) 
+[![Part 2 Showing Reactions Delete Route Function](https://i.imgur.com/vKb2F1B.png)](https://drive.google.com/file/d/1K7d5ifz7e75Ikni3TvkPLFZsVmF13KZ6/view) 
+
 ## Table of Contents
 
 - [License](#License)
@@ -24,49 +30,6 @@ Jose Escoto, Full Stack Development Student, University of Berkeley.
 For more questions please contact below:
 Email: j.escoto@gmail.com
 GitHub: [escotoj](https://github.com/escotoj)
-
-## TODO
-
-timestamp for thoughts 
-
-### NEED WORK
-
-THOUGHT ROUTES
-
-- postReaction `set up well but need to test`
-- deleteReaction `set up well but need to test`
-
-### USER ROUTES
-
-- addFriend `WORKS route saved` - `/users/6484d5e326cedc48ec284240/friends` - `two friends added to one user and one deleted to test `
-- removeFriend `untested but worked on`
-
-## DONE
-
-### TEST ROUTES 
-- updateUser `good`
-- deleteThought `good`
-- updateThought `good`
-- getUsers `Good`
-- getSingleUser `Good`
-- createUser `Good`
-- deleteUser `GOOD`
-- getThoughts`Good`
-- getSingleThought `Good`
-- createThought `Good`
-
-- CHECK - timestamps in the models, and update route in the controller Reactiongid.
-- FINISH ADDING ALL ROUTES
-- ADDED (User Controllers code)
-- Completed the Thought controller
-- FIXed Reactions.js and merge it to Thought.js
-  (This will not be a model, but rather will be used as the reaction field's subdocument schema in the Thought model.)
-- ADD full REAME
-- get mongoDB connected `+`
-- API routes for user and thought
-- REACTION NEEDS WORK - did work on them 
-- FRIENDS NEEDS WORK
-- userroutes.js friend route
 
 ## CODE NEEDED FOR SERVER
 
