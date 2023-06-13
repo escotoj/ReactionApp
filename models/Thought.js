@@ -4,8 +4,8 @@ const { Schema, Types, model } = require("mongoose");
 const reactionSchema = new Schema(
     {
       reactionId: {
-        type: String,
-        required: true,
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId(),
       },
       reactionBody: {
         type: String,
@@ -39,10 +39,6 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      // get: function () {
-      //   const formattedDate = this.createdAt.toISOString();
-      //   return formattedDate;
-      // }    
     },
     // array of nested documents
     reactions: [reactionSchema],

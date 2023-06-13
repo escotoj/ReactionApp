@@ -38,7 +38,7 @@ THOUGHT ROUTES
 
 ### USER ROUTES
 
-- addFriend `untested but worked on`
+- addFriend `WORKS route saved` - `/users/6484d5e326cedc48ec284240/friends` - `two friends added to one user and one deleted to test `
 - removeFriend `untested but worked on`
 
 ## DONE
