@@ -7,8 +7,8 @@ Using MongoDB to build a social network web application. Using Express.js for ro
 ## Video Walkthrough
 
 Walkthrough videos of Application showing functionality: 
-[![Part 1 showing all routes function](https://i.imgur.com/vKb2F1B.png)](https://drive.google.com/file/d/1Hj49s6_5Kiw8lEpBYLBB52-XA7BseQm4/view ) 
-[![Part 2 Showing Reactions Delete Route Function](https://i.imgur.com/vKb2F1B.png)](https://drive.google.com/file/d/1K7d5ifz7e75Ikni3TvkPLFZsVmF13KZ6/view) 
+[![Part 1 showing all routes function]](https://drive.google.com/file/d/1Hj49s6_5Kiw8lEpBYLBB52-XA7BseQm4/view ) 
+[![Part 2 Showing Reactions Delete Route Function]](https://drive.google.com/file/d/1K7d5ifz7e75Ikni3TvkPLFZsVmF13KZ6/view) 
 
 ## Table of Contents
 
