@@ -1,5 +1,5 @@
 const { Schema, Types, model } = require("mongoose");
-// model funtion is imported frm mong which creates models for our db
+
 
 const userSchema = new Schema(
   {

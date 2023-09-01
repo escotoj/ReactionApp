@@ -16,7 +16,6 @@ module.exports = {
   async getSingleUser(req, res) {
     try {
       const user = await User.findOne({_id: req.params.userId});
-      // .select('-__v'); IN MINIPROJECT EXAMPLE BUT IDK WHAT IT IS
       if (!user) {
         return res.status(404).json({ message: "No user Found :(" });
       }
@@ -79,8 +78,7 @@ module.exports = {
     }
   },
 
-  // *************************** NEEDS WORK *********************************************
-  // both use the $pull and $addToSet operators
+
   // POST /FRIEND
   async addFriend(req, res) {
     try {

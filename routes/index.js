@@ -1,4 +1,4 @@
-// MAINROUTES INDEX
+// MAIN ROUTES INDEX
 
 const router = require('express').Router();
 const apiRoutes = require('./api');
