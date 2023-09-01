@@ -2,7 +2,7 @@
 
 ## Description
 
-Using MongoDB to build a social network web application. Using Express.js for routing, MongoDB database, and the Mongoose ODM.
+Utilized MongoDB to build a social network web application. Using Express.js for routing, MongoDB database, and the Mongoose ODM.
 
 ## Video Walkthrough
 
